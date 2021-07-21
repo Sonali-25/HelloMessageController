@@ -16,4 +16,9 @@ public class MessageController {
     public String sayHelloMark(@RequestParam(value="name")String name) {
         return "Hello " + name + " !!";
     }
+
+    @GetMapping ("/param/{name}")
+    public String sayHelloParam(@PathVariable String name) {
+        return "Hello " + name + " !!";
+    }
 }
